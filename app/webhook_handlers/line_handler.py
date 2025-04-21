@@ -9,5 +9,4 @@ handler = WebhookHandler(channel_secret)
 
 @handler.add(MessageEvent, message=TextMessageContent)
 def on_message(event):
-    print(f"Received message: {event.message.text}")
     handle_text_message(event)
